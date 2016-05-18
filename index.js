@@ -12,7 +12,7 @@ var pluginError = require('gulp-util').pluginError,
  */
 module.exports = function(search,replacement){
   return new Transform({
-    objectMode: true;
+    objectMode: true,
     transform: function(file,enc,callback){
       if (file.isNull()) {
         return callback(null,file);
@@ -20,7 +20,7 @@ module.exports = function(search,replacement){
       function replace(){
         if (file.isStream()) {
           for (var i in search){
-            file.contents = file.contents.pipe(rs(search[i],fs.readFileSync(replacement[i])));
+            file.contents = file.contents.pipe(rs('<!-- '+search[i]+' -->',fs.readFileSync(replacement[i])));
             return callback(null,file);
           }
         }
