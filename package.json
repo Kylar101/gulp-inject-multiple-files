@@ -1,0 +1,26 @@
+{
+  "name": "gulp-replace-files",
+  "version": "1.0.0",
+  "description": "A function to inject multiple files into multiple locations",
+  "main": "index.js",
+  "scripts": {
+    "test": "le test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kylar101/gulp-replace-files.git"
+  },
+  "keywords": [
+    "inject",
+    "replace"
+  ],
+  "author": {
+    "name":"Ben Lowbridge",
+    "email":"ba.lowbridge@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kylar101/gulp-replace-files/issues"
+  },
+  "homepage": "https://github.com/Kylar101/gulp-replace-files#readme"
+}
