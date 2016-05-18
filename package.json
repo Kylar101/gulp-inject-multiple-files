@@ -15,12 +15,17 @@
     "replace"
   ],
   "author": {
-    "name":"Ben Lowbridge",
-    "email":"ba.lowbridge@gmail.com"
+    "name": "Ben Lowbridge",
+    "email": "ba.lowbridge@gmail.com"
   },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kylar101/gulp-replace-files/issues"
   },
-  "homepage": "https://github.com/Kylar101/gulp-replace-files#readme"
+  "homepage": "https://github.com/Kylar101/gulp-replace-files#readme",
+  "devDependencies": {
+    "gulp-util": "^3.0.7",
+    "istextorbinary": "^2.1.0",
+    "replacestream": "^4.0.0"
+  }
 }
