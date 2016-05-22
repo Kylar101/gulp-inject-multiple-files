@@ -1,5 +1,5 @@
 {
-  "name": "gulp-replace-files",
+  "name": "gulp-inject-multiple-files",
   "version": "1.0.0",
   "description": "A function to inject multiple files into multiple locations",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kylar101/gulp-replace-files.git"
+    "url": "git+https://github.com/Kylar101/gulp-inject-multiple-files.git"
   },
   "keywords": [
     "inject",
@@ -20,11 +20,11 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kylar101/gulp-replace-files/issues"
+    "url": "https://github.com/Kylar101/gulp-inject-multiple-files/issues"
   },
-  "homepage": "https://github.com/Kylar101/gulp-replace-files#readme",
+  "homepage": "https://github.com/Kylar101/gulp-inject-multiple-files#readme",
   "devDependencies": {
-    "gulp-util": "^3.0.7",
+    "readable-stream": "2.1.3",
     "istextorbinary": "^2.1.0",
     "replacestream": "^4.0.0"
   }
