@@ -1,4 +1,4 @@
-# gulp-inject-multiple-files [![NPM version][npm-image][npm-url][![Build status]]]
+# gulp-inject-multiple-files [![NPM version][npm-image]][npm-url] [![Build status][ben-image]][ben-url]
 > A function that allows users to inject multiple files into a single locations
 
 ## Installation
@@ -21,7 +21,7 @@ var injectfiles = require('gulp-inject-multiple-files');
 
 ```javascript
 gulp.task('inject-files',function(){
-  
+
   // searching file, putting into array, stripping away extra char
   var filecontent = fs.readFileSync('foo.html', 'utf8');
   var match = filecontent.match(/inject\:([a-z-]+)\b/ig);
