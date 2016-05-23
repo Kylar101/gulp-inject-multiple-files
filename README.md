@@ -3,7 +3,7 @@
 
 ## Installation
 
-First, install `gulp-inject-multiple-files` as a development dependency"
+First, install `gulp-inject-multiple-files` as a development dependency:
 
 ```shell
 npm install --save-dev gulp-inject-multiple-files
@@ -27,14 +27,14 @@ gulp.task('inject-files',function(){
   var match = filecontent.match(/inject\:([a-z-]+)\b/ig);
   var files = [match.length];
   for(var i in match){
-      match[i] = match[i].replace('inject:',"");
-      files[i] = 'parts/'+match[i]+'.html';
+    match[i] = match[i].replace('inject:',"");
+    files[i] = 'parts/'+match[i]+'.html';
+  }
 
   // begin injection
-    gulp.src('foo.html')
-      .pipe(replaceFile(match,files))
-      .pipe(gulp.dest('temp'));
-    }
+  gulp.src('foo.html')
+    .pipe(injectfiles(match,files))
+    .pipe(gulp.dest('temp'));
 });
 ```
 
