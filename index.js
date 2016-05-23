@@ -2,7 +2,6 @@
 
 // Dependencies
 var rs = require('replacestream'),
-    textorbinary = require('istextorbinary'),
     Transform = require('readable-stream/transform'),
     fs = require('fs');
 /*
@@ -21,7 +20,7 @@ module.exports = function(search,replacement){
         // stream
         if (file.isStream()) {
           for (var i in search){
-            file.contents = file.contents.pipe(rs('<!-- inject:'+search[i]+' -->',fs.readFile(replacement[i])));
+            file.contents = file.contents.pipe(rs('<!-- inject:'+search[i]+' -->',fs.readFileSync(replacement[i])));
             return callback(null,file);
           }
         }
@@ -30,41 +29,20 @@ module.exports = function(search,replacement){
         if (file.isBuffer()){
           if (search instanceof RegExp) {
             for (var i in search){
-              file.contents = new Buffer(String(file.contents).replace('<!-- inject:'+search[i]+' -->', fs.readFile(replacement[i])));
+              file.contents = new Buffer(String(file.contents).replace('<!-- inject:'+search[i]+' -->', fs.readFileSync(replacement[i])));
             }
           }
+          // all others
           else{
             for (var i in search){
               var chunks = String(file.contents).split('<!-- inject:'+search[i]+' -->');
 
-              var result;
-              if (typeof fs.readFile(replacement[i]) === 'function'){
-                // Start with the first chunk already in the result
-                // Replacements will be added thereafter
-                // This is done to avoid checking the value of i in the loop
-                result = [ chunks[0] ];
-
-                // The replacement function should be called once for each match
-                for (var j = 1; j < chunks.length;j++){
-                  // add replacement value
-                  result.push(replacement('<!-- inject:'+search[i]+' -->'));
-                  // add next chunk
-                  result.push(chunks[j]);
-                }
-                result = result.join("");
-
-              }
-              else{
-                result = chunks.join(replacement[i]);
-              }
+              var result = chunks.join(fs.readFileSync(replacement[i]));
               file.contents = new Buffer(result);
             }
           }
           return callback(null,file);
         }
-
-
-
         callback(null,file);
       }
       // end replace
