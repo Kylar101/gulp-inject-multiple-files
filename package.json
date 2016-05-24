@@ -1,6 +1,6 @@
 {
   "name": "gulp-inject-multiple-files",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A function to inject multiple files into one location",
   "main": "index.js",
   "dependencies":{

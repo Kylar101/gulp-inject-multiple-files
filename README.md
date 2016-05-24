@@ -52,7 +52,7 @@ gulp.task('inject-files',function(){
 <p>Hello World!</p>
 ```
 
-### inside foobar.html
+### inside foo-bar.html
 
 ```html
 <p>My name is Foo Bar</p>
