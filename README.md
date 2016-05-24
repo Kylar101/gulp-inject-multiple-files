@@ -46,13 +46,13 @@ gulp.task('inject-files',function(){
 <!-- inject:foo-bar -->
 ```
 
-### inside bar.html
+### inside parts/bar.html
 
 ```html
 <p>Hello World!</p>
 ```
 
-### inside foo-bar.html
+### inside parts/foo-bar.html
 
 ```html
 <p>My name is Foo Bar</p>
