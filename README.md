@@ -50,7 +50,7 @@ gulp.task('inject-files',function(){
 <p>My name is Foo Bar</p>
 ```
 
-## Output inside temp/foo.hmtl
+## Output inside temp/foo.html
 
 ```html
 <p>Hello World!</p>
