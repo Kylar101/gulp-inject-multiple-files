@@ -22,19 +22,11 @@ var injectfiles = require('gulp-inject-multiple-files');
 ```javascript
 gulp.task('inject-files',function(){
 
-  // searching file, putting into array, stripping away extra char
-  var filecontent = fs.readFileSync('foo.html', 'utf8');
-  var match = filecontent.match(/inject\:([a-z-]+)\b/ig);
-  var files = [match.length];
-  for(var i in match){
-    match[i] = match[i].replace('inject:',"");
-    files[i] = 'parts/'+match[i]+'.html';
-  }
-
   // begin injection
   gulp.src('foo.html')
-    .pipe(injectfiles(match,files))
+    .pipe(injectfiles('foo.html','parts'))
     .pipe(gulp.dest('temp'));
+
 });
 ```
 
@@ -58,7 +50,7 @@ gulp.task('inject-files',function(){
 <p>My name is Foo Bar</p>
 ```
 
-## Output
+## Output inside temp/foo.hmtl
 
 ```html
 <p>Hello World!</p>
