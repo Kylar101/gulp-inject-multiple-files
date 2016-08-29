@@ -1,4 +1,4 @@
-# gulp-inject-multiple-files
+# gulp-inject-multiple-files [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url]
 > A function that allows users to inject multiple files into a single locations
 
 ## Installation
