@@ -1,4 +1,4 @@
-# gulp-inject-multiple-files [![Build Status](https://travis-ci.org/Kylar101/gulp-inject-multiple-files.svg?branch=master)](https://travis-ci.org/Kylar101/gulp-inject-multiple-files)
+# gulp-inject-multiple-files [![Build Status](https://travis-ci.org/Kylar101/gulp-inject-multiple-files.svg?branch=master)](https://travis-ci.org/Kylar101/gulp-inject-multiple-files) ![alt tag](https://badge.fury.io/js/gulp-inject-multiple-files.svg)
 > A function that allows users to inject multiple files into a single locations
 
 ## Installation
